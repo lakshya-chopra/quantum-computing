@@ -65,5 +65,6 @@ They follow 4 main quantum principles, stated as follows:
 
 - [Quantum Algorithms](https://github.com/Qiskit/textbook/blob/main/notebooks/ch-algorithms)
 
-
+- [Global and Relative Phase](https://pavanjayasinha.medium.com/but-what-is-a-quantum-phase-factor-d05c15c321fe)
+  (Note that global of a qubit doesn't really matter, relative phases are more important)
 
