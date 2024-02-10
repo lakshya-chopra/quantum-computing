@@ -5,7 +5,7 @@ Quantum Algorithms are specifically curated for quantum computers to showcase ho
 Before you learn this, please revise some common Qubit gates like:
  - Pauli X,Y and Z
  - Hadamard
- - CNOT
+ - CNOT (also learn that CNOT creates entanglement only if the control qubit is in a superposition state)
  - Toffoli
  - Modified CNOT (which is activated when control Qubit is |0⟩)
  - U gate (which can be used to generate an arbitrary qubit), alongside Rx, Ry and Rz operators
