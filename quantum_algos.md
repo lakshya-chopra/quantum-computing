@@ -20,4 +20,14 @@ Let's look at some common Quantum algorithms :
  - There are n+1 input qubits, with the first n being the actual inputs and the last one an auxiliary.
 
  - An oracle is used which implements a function f(x), which is obtained using the (n+1)th Qubit that is set to |0⟩.
+ - Here's how the oracle is implemented for a single qubit function:
+   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/1c0ce24a-1975-4bee-b9d8-65c2027037cc)
+   [Source](https://arxiv.org/pdf/2201.10574.pdf)
+ - Circuit Diagram:
+   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/9117f696-3239-420e-b0c3-ef4520abfda6)
+
+ - The computation behind the algorithm is big and can be read at the above mentioned source itself.
+ - The final result for 0...0 bitstring is always 0...0 in the case of constant functions and something else for balanced functions.
+
+
  
