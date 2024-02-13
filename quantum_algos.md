@@ -9,6 +9,9 @@ Before you learn this, please revise some common Qubit gates like:
  - Toffoli
  - Modified CNOT (which is activated when control Qubit is |0⟩)
  - U gate (which can be used to generate an arbitrary qubit), alongside Rx, Ry and Rz operators
+ - An interesting modification of CNOT gate which works only when the control qubit is |0>.
+    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/c2e31bfd-0d82-4e61-aa81-0d0206be2de3)
+
 
 Let's look at some common Quantum algorithms :
 
@@ -25,7 +28,7 @@ Let's look at some common Quantum algorithms :
    [Source](https://arxiv.org/pdf/2201.10574.pdf)
  - Circuit Diagram:
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/9117f696-3239-420e-b0c3-ef4520abfda6)
-
+ 
  - The computation behind the algorithm is big and can be read at the above mentioned source itself.
  - The final result for 0...0 bitstring is always 0...0 in the case of constant functions and something else for balanced functions.
 
