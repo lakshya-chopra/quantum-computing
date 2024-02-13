@@ -36,4 +36,4 @@ Let's look at some common Quantum algorithms :
  - The final result for 0...0 bitstring is always 0...0 in the case of constant functions and something else for balanced functions.
 
 
- ### ALL the picture credits to this beautiful and informative research pdf: [Basic Quantum Algorithms]https://arxiv.org/pdf/2201.10574.pdf)
+ #### ALL the picture credits to this really good & informative research pdf: [Basic Quantum Algorithms](https://arxiv.org/pdf/2201.10574.pdf)
