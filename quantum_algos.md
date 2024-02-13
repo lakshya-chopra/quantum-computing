@@ -11,6 +11,10 @@ Before you learn this, please revise some common Qubit gates like:
  - U gate (which can be used to generate an arbitrary qubit), alongside Rx, Ry and Rz operators
  - An interesting modification of CNOT gate which works only when the control qubit is |0>.
     ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/c2e31bfd-0d82-4e61-aa81-0d0206be2de3)
+ - more:
+   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/606041af-15dc-4f5b-98d2-1f2a13fb0e4e)
+- Toffoli gate:
+  ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/68e5ad8d-c1e2-44d5-9022-25c46c3f9901)
 
 
 Let's look at some common Quantum algorithms :
@@ -25,7 +29,6 @@ Let's look at some common Quantum algorithms :
  - An oracle is used which implements a function f(x), which is obtained using the (n+1)th Qubit that is set to |0⟩.
  - Here's how the oracle is implemented for a single qubit function:
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/1c0ce24a-1975-4bee-b9d8-65c2027037cc)
-   [Source](https://arxiv.org/pdf/2201.10574.pdf)
  - Circuit Diagram:
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/9117f696-3239-420e-b0c3-ef4520abfda6)
  
@@ -33,4 +36,4 @@ Let's look at some common Quantum algorithms :
  - The final result for 0...0 bitstring is always 0...0 in the case of constant functions and something else for balanced functions.
 
 
- 
+ ### ALL the picture credits to this beautiful and informative research pdf: [Basic Quantum Algorithms]https://arxiv.org/pdf/2201.10574.pdf)
