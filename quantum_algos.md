@@ -15,6 +15,8 @@ Before you learn this, please revise some common Qubit gates like:
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/606041af-15dc-4f5b-98d2-1f2a13fb0e4e)
 - Toffoli gate:
   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/68e5ad8d-c1e2-44d5-9022-25c46c3f9901)
+- Decomposition of multiqubit (n) Toffoli gates  with the help of (n - 2) ancilla bits and CNOT gates.
+- Toffoli gate with empty control bits (activated by 0)
 
 
 Let's look at some common Quantum algorithms :
