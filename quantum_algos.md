@@ -55,6 +55,8 @@ Let's look at some common Quantum algorithms :
   - Here's how a sample oracle with s = 1011 can be implemented. Notice how we use a CNOT for each bit '1' in s. We can generalize this as follows: (CNOT<sub>ij</sub>)^i, i can either be 0 or 1 and j is the output Qubit (the target)
   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/557d527f-ae47-4a7a-922b-b89e238e13ea)
 
+### Simon’s Problem: This is another particular case of the Deutsch Josza Algorithm. It is exponentially faster than the best known classical algorithms. This algorithm exploits **Quantum Parallelism** and **Maximal Entanglement** (like in Bell States).
+ - 
 
 
  #### ALL the picture credits to this really good & informative research pdf: [Basic Quantum Algorithms](https://arxiv.org/pdf/2201.10574.pdf)
