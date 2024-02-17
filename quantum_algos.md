@@ -55,8 +55,21 @@ Let's look at some common Quantum algorithms :
   - Here's how a sample oracle with s = 1011 can be implemented. Notice how we use a CNOT for each bit '1' in s. We can generalize this as follows: (CNOT<sub>ij</sub>)^i, i can either be 0 or 1 and j is the output Qubit (the target)
   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/557d527f-ae47-4a7a-922b-b89e238e13ea)
 
-### Simon’s Problem: This is another particular case of the Deutsch Josza Algorithm. It is exponentially faster than the best known classical algorithms. This algorithm exploits **Quantum Parallelism** and **Maximal Entanglement** (like in Bell States).
- - 
+### Simon’s Problem: This is another particular case of the Deutsch Josza Algorithm. It is exponentially faster than the best known classical algorithms. This algorithm exploits **Quantum Parallelism** and **Maximal Entanglement** (like in Bell States). It is basically used to determine whether a function is one to one or two to one. 
+ - The classical approach to determine this involves 2<sup>n/2</sup> in the best case and 2<sup>n</sup> in the worst, Simon's algo can do the same in just 1 try.
+ - Here, we are given a function f : {0,1}<sup>n</sup> -> {0,1}<sup>n</sup>, we have a secret string s (which has the same number of bits as the domain) such that f(x) = f(y) where y = x ⊕ s.
+ - Here, we have 2n bits going through/out of the oracle, first n are the inputs, and the next n are used to store the outputs after applying the oracle U<sub>f</sub>.
+   <br>![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/29af3584-eea3-4c7b-a622-43a203ee5259)
+ - The algorithm is implemented in the almost entirely same way as the above 2 algos, where first we apply the Hadamard gates and then U<sub>f</sub> acts on the state
+   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/3729e462-cd34-428c-b41b-afa912e6b6cb)
+ <br> to produce
+   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/272bea8a-f895-4922-91cc-5ef502428b3f)
 
 
- #### ALL the picture credits to this really good & informative research pdf: [Basic Quantum Algorithms](https://arxiv.org/pdf/2201.10574.pdf)
+
+
+
+
+ #### References: 
+   - [Basic Quantum Algorithms](https://arxiv.org/pdf/2201.10574.pdf)
+   - [Bernstein-Vazirani](https://www.ryanlarose.com/uploads/1/1/5/8/115879647/bv-algorithm.pdf)
