@@ -46,10 +46,11 @@ Let's look at some common Quantum algorithms :
 - ### Bernstein-Vazirani: This is another algorithm based on the above mentioned Deutsch Josza algo. It is concerned with finding a hidden bit string "s" which is utilised by a function f(x) = s.x, where (.) -> indicates the inner product of the two bitstrings.
    - The classical approach to find s involves N tries, where N = number of bits in the bitstring, and is implemented by passing to the function 0...01, 0...10, until 1...00, where the last bit becomes 1 and rest all are zero.
    - The quantum approach utilises the power of Quantum Parallelism (using Hadamard Gates) and takes only 1 try, thus provides a tremendous speedup over the classical approach.
+   - Phase Inversion (or Kickback) is the amazing trick utilised here.
    - This algorithm too doesn't have any sort of entanglement, the only operator which can create entanglement is U<sub>f</sub>, which too requires a state which is either fully entangled or partially, however, the state |ψ2> is fully unentangled as it can be factorised completely in the following way: <br>
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/9b510d6d-c92f-4f86-8273-d0447f50bb99)
 
-  - Here's how a sample oracle with s = 1011 can be implemented. Notice how we use a CNOT for each bit '1' in s. We can generalize this as follows: (CNOT)^i, i can either be 0 or 1. 
+  - Here's how a sample oracle with s = 1011 can be implemented. Notice how we use a CNOT for each bit '1' in s. We can generalize this as follows: (CNOT<sub>ij</sub>)^i, i can either be 0 or 1 and j is the output Qubit (the target)
   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/557d527f-ae47-4a7a-922b-b89e238e13ea)
 
 
