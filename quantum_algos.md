@@ -49,7 +49,7 @@ Let's look at some common Quantum algorithms :
    - This algorithm too doesn't have any sort of entanglement, the only operator which can create entanglement is U<sub>f</sub>, which too requires a state which is either fully entangled or partially, however, the state |ψ2> is fully unentangled as it can be factorised completely in the following way: <br>
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/9b510d6d-c92f-4f86-8273-d0447f50bb99)
 
-  - Here's how a sample oracle can
+  - Here's how a sample oracle with s = 1011 can be implemented. Notice how we use a CNOT for each bit '1' in s. We can generalize this as follows: (CNOT)^i, i can either be 0 or 1. 
   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/557d527f-ae47-4a7a-922b-b89e238e13ea)
 
 
