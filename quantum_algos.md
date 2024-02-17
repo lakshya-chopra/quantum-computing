@@ -36,6 +36,10 @@ Let's look at some common Quantum algorithms :
  
  - The computation behind the algorithm is big and can be read at the above mentioned source itself.
  - The final result for 0...0 bitstring is always 0...0 in the case of constant functions and something else for balanced functions.
+ - For multi qubit functions, we use Toffoli gates to implement a balanced oracle.
+- Bernstein-Vazirani: This is another algorithm based on the above mentioned Deutsch Josza algo. It is concerned with finding a hidden bit string "s" which is utilised by a function f(x) = s.x, where (.) -> indicates the inner product of the two bitstrings.
+   - The classical approach to find s involves N tries, where N = number of bits in the bitstring, and is implemented by passing to the function 0...01, 0...10, until 1...00, where the last bit becomes 1 and rest all are zero.
+   - The quantum approach utilises the power of Quantum Parallelism (using Hadamard Gates) and takes only 1 try, thus provides a tremendous speedup over the classical approach.
 
 
  #### ALL the picture credits to this really good & informative research pdf: [Basic Quantum Algorithms](https://arxiv.org/pdf/2201.10574.pdf)
