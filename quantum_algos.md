@@ -56,14 +56,24 @@ Let's look at some common Quantum algorithms :
   ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/557d527f-ae47-4a7a-922b-b89e238e13ea)
 
 ### Simon’s Problem: This is another particular case of the Deutsch Josza Algorithm. It is exponentially faster than the best known classical algorithms. This algorithm exploits **Quantum Parallelism** and **Maximal Entanglement** (like in Bell States). It is basically used to determine whether a function is one to one or two to one. 
- - The classical approach to determine this involves 2<sup>n/2</sup> in the best case and 2<sup>n</sup> in the worst, Simon's algo can do the same in just 1 try.
+ - The classical approach to determine this involves 2<sup>n/2</sup> in the best case and 2<sup>n</sup> in the worst, Simon's algo can do the same in n try.
  - Here, we are given a function f : {0,1}<sup>n</sup> -> {0,1}<sup>n</sup>, we have a secret string s (which has the same number of bits as the domain) such that f(x) = f(y) where y = x ⊕ s.
  - Here, we have 2n bits going through/out of the oracle, first n are the inputs, and the next n are used to store the outputs after applying the oracle U<sub>f</sub>.
+ - All the 2n qubits are initialized to 0.....0 initially.
    <br>![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/29af3584-eea3-4c7b-a622-43a203ee5259)
  - The algorithm is implemented in the almost entirely same way as the above 2 algos, where first we apply the Hadamard gates and then U<sub>f</sub> acts on the state
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/3729e462-cd34-428c-b41b-afa912e6b6cb)
  <br> to produce
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/272bea8a-f895-4922-91cc-5ef502428b3f)
+ - After application of the oracle function, we measure the last n qubits, if we get f(x) = z<sub>0</sub>z<sub>1</sub>....z<sub>n</sub>, the first n qubits collapse to  a superposition of the points in the domain that will give us this f(x).
+ - ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/61bb73f1-5c6d-40b6-8d1a-c97e37fbbd06)
+ - After application of the second set of Hadamard gates on the first n qubits, we get: <br>![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/80a30154-048a-4894-9828-a81b89333eeb)
+ - This can further be simplified to this, ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/e4edc07a-cbf6-451c-bf76-9b4090c619d9) <br> after writing (x' + s) as: ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/076b1b78-1efd-490d-b786-04ce2dc334d7)
+ - 
+
+
+
+
 
 
 
