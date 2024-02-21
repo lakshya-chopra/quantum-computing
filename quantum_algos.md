@@ -74,7 +74,9 @@ Let's look at some common Quantum algorithms :
 
 
 
+#### The above mentioned algorithms work on a similar principle that is Quantum Parallelism where the Hadamard gates generate all the possible combinations at the same time.The Oracle function applies the function for all possible qubit combinations and computes the output. The Oracle does a trick by applying a *Phase Inversion* on the input bits which encodes the result of the computation onto the input bits.
 
+#### The final set of Hadamard gates lead to constructive interference of the desired outputs (amplification of probability amplitudes) and destructive for the undesired ones, giving us a very high probability to get the correct result in just 1 try.
 
 
 
