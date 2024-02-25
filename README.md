@@ -18,7 +18,8 @@ For superconducting qubits, current is applied.
     
   - Inteference: Quantum Interference is the essentially the interference of the probability amplitudes of various quantum paths which lead to observable patterns (like constructive interference or destructive)
     
-  - Measurement
+  - Measurement: Measuring a quantum state or a qubit collapses it into one of its basis states with a probability given by the square of the mathematical coefficient scaling the basis state. Ex : For single qubit systems: |q⟩ = a|0⟩ + b|1⟩, and so probability that q will collapse to |0⟩ is given by |⟨q|0⟩|² = |a|² (Born’s rule). For multi qubit systems, the basis states are given by {0,1}<sup>n</sup>. 
+<br>Entanglement and superposition together than can be carefully utilised to solve many quantum problems.
 
 ## Resources:
   - [Problems Quantum Computers solve and a brief intro on them](https://learn.microsoft.com/en-us/azure/quantum/overview-understanding-quantum-computing#how-does-quantum-computing-solve-problems)
