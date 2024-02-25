@@ -8,7 +8,13 @@ They follow 4 main quantum principles, stated as follows:
   - Quantum Entanglement: [Quantum entanglement is the phenomenon that occurs when a group of particles are generated, interact, or share spatial proximity in such a way that the quantum state of each particle of the group cannot be described independently of the state of the others, including when the particles are separated by a large distance.](https://en.wikipedia.org/wiki/Quantum_entanglement). Thus, the particles are correlated with each other, also the interesting thing is, the states aren't decided until one of the particles is measured. They don't involve any transfer of information as well (for eg: if you measure the spin of one particle to be negative, then the particle entagled with it must have the opposite spin).
     
   - Superposition: Every Quantum state can be thought of as a linear combinatin of some other quantum states (for eg: a linear combination of vectors with some vectors being the basis). Similar to the superposition of waves/electric fields.
-    A Qubit in quantum computers is thus a superposition of |0⟩ and |1⟩ (the basis).
+A Qubit in quantum computers is thus a superposition of |0⟩ and |1⟩ (the basis).
+Qubits are neutral atoms and the gates are implemented by shining lasers of a certain frequency or colour. The frequency is calculated from the energy band gap between the |0⟩ and |1⟩.
+
+For superconducting qubits, current is applied.
+
+
+
     
   - Inteference: Quantum Interference is the essentially the interference of the probability amplitudes of various quantum paths which lead to observable patterns (like constructive interference or destructive)
     
