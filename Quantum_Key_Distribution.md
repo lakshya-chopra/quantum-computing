@@ -1,4 +1,4 @@
-## Quantum Key Distribution
+![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/9b2b09d6-f90e-4ae2-b2e2-9799fc79e98d)## Quantum Key Distribution
 Quantum Key Distribution, as opposed to Public Key Cryptography, uses the components of Quantum Mechanics to enable a secure channel of communication between 2 parties. This is standardized by various protocols, that are:
 listed as follows:
   - [BB84](https://arxiv.org/abs/2312.05609)
@@ -23,6 +23,8 @@ Some important points:
 
  - In Discrete Variable QKD, quantum info is encoded into DVs and binary data are measured by *single photon detectors* to extract the received quantum states. Here, the information is directly encoded into the polarization or phase state of the transmitted photon.
 - In Continuous Var QKD, the wave nature of light is utilised, and quantum info is encoded into the amplitude and phase of a *coherent* laser and is measured using **Homodyne detectors**.
+- ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/d4bca1ac-3e49-459b-8bc1-bf4b730b3794)
+
 
 ## Management of Secure keys:
 
@@ -40,4 +42,6 @@ Some important points:
 ### References:
   - [Helpful Link](https://medium.com/@qcgiitr/fundamentals-of-quantum-key-distribution-bb84-b92-e91-protocols-e1373b683ead)
   - [More on BB84](https://www.global.toshiba/ww/company/digitalsolution/articles/tsoul/38/004.html)
-  - 
+  - [Quantum Channel](https://www.sciencedirect.com/topics/engineering/quantum-channel)
+  - [Quantum Indeterminacy](https://en.wikipedia.org/wiki/Quantum_indeterminacy)
+  - [QKD/Wikipedia](https://en.wikipedia.org/wiki/Quantum_key_distribution)
