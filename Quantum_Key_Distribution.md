@@ -16,7 +16,21 @@ Public Key Cryptography: :point_down:
 Some important points:
   - It is a common misunderstanding that QKD is also used to encrypt & distribute data, which it doesn't. It is meant to produce and distribute a key which later on is used by an encryption algorithm such as AES256 to encrypt the data.
   - Thus, QKD can replace PKC, which requires 2 keys: Public & Private. PKC also poses a problem since it relies on computational tasks that are based on the unproven assumption of being hard to solve, such as factoring a really large integer into a product of its primes.
-  - The security of QKD is proved by Information Theory, & forward secrecy.
+  - The security of QKD is proved by Information Theory, & forward secrecy.Thus, theoretically, QKD is unhackable since any attempts to access the information leaves behind evidence, and the key 🗝️🔐 only decodes a small amount of a secure information and the private key may be changed every second.
+  - The successful transmission of secure information with a quantum channel has made QKD possible, and much more practical for the real world.
+  - QKD involves 2 parties that wish to exchange keys through a classical and quantum channel. The Quantum channel is required to send quantum states, which doesn't need to be secure, and can be implemented over fiber optic, and even over free space. 
+**Quantum Channel* is one which transmits qubits, where the states O and 1 are attached to photons by **Polarization**(incase of a fibre optic channel).
+
+ - In Discrete Variable QKD, quantum info is encoded into DVs and binary data are measured by *single photon detectors* to extract the received quantum states. Here, the information is directly encoded into the polarization or phase state of the transmitted photon.
+- In Continuous Var QKD, the wave nature of light is utilised, and quantum info is encoded into the amplitude and phase of a *coherent* laser and is measured using **Homodyne detectors**.
+
+## Management of Secure keys:
+
+ - Key Exchange
+ - Key Sifting
+ - Secret Key Distillation 
+
+
 ## Key Exchange :
   - The key exchange involves the encoding of information in qubits (usually photons).
   - In general, 2 main protocols are used to encode information:
