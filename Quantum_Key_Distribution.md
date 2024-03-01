@@ -10,13 +10,20 @@ listed as follows:
 ## QKD has the ability to detect any attempts made by any third party to access/gain knowledge of the key, this is possible through the measurement paradox, because any measurement will introduce detectable anomalies on the key. 
 The process of measuring any key will in general disturb the system.
 
+Public Key Cryptography: :point_down:
+![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/141833ae-3053-46d8-bdaf-7c98a991f04e) 
+
 Some important points:
   - It is a common misunderstanding that QKD is also used to encrypt & distribute data, which it doesn't. It is meant to produce and distribute a key which later on is used by an encryption algorithm such as AES256 to encrypt the data.
-  - Thus, QKD can replace PKC, which requires 2 keys: Public & Private.
+  - Thus, QKD can replace PKC, which requires 2 keys: Public & Private. PKC also poses a problem since it relies on computational tasks that are based on the unproven assumption of being hard to solve, such as factoring a really large integer into a product of its primes.
   - The security of QKD is proved by Information Theory, & forward secrecy.
 ## Key Exchange :
   - The key exchange involves the encoding of information in qubits (usually photons).
   - In general, 2 main protocols are used to encode information:
       - Prepare and measure
       - Quantum Entanglement: Here two qubits are entangled such that they become combined states which can not be individually separated, changes in any one of the state affects the another (note that this is not some sort of teleportation that takes place, but instead the two qubits are correlated upon their formation. This is helpful in key distribution, as it immediately detects any forgery.
-      - 
+   
+### References:
+  - [Helpful Link](https://medium.com/@qcgiitr/fundamentals-of-quantum-key-distribution-bb84-b92-e91-protocols-e1373b683ead)
+  - [More on BB84](https://www.global.toshiba/ww/company/digitalsolution/articles/tsoul/38/004.html)
+  - 
