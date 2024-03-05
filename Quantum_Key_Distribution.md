@@ -50,6 +50,21 @@ Mutually Unbiased Bases can also be used for Quantum Error Connection, Quantum S
 <br>
 - BB84: Alice and Bob use an insecure quantum channel and an authenticated classical channel.
   - Quantum Phase: First, Alice prepares a random quantum state encoding each bit (message bits) with the help of 4 basis states: horizontal, vertical, diagnol, & anti-diagnol (Photons as qubits). This is then sent to Bob, via a quantum channel, who then applies a quantum measurement to decode the bit values, effectively collapsing the state sent. Both Alice and Bob record their measurements & alice also notes the quantum system/state she sent and the relevant encoding. The transmission over the quantum channel introduces noise and effects of the eavesdropping attempts.
+  ![photon polarization](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/ce248f8e-9c44-4926-974c-ce6acafc6eaf)
+  ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/0aee0c8f-15f8-49e6-82f2-9314837ffc48)<br>
+  - Classical Phase:
+    Here, Bob will notify over a classical channel about the bases he chose, Alice will inform Bob about the bases he chose correctly, after that Bob removes the encoding to obtain something known as a *Sifted key*, which is the key that is identical to both if Bob chose the exact same basis for all bits as Alice, and partially identical, if his choices weren't exactly correct. Best explained through this diagram:
+    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/3083d64c-5c50-4e8c-b472-882e5c226be2)
+    <br>
+    To detect presence of any 3rd party, these two will now share a few bits of the sifted key, any disagreement will make it clear that there was forgery involved. Disagreement occurs when Bob uses the same polarization basis for a qubit but still obtains a different bit value. For Ex: ![image](https://miro.medium.com/v2/resize:fit:828/format:webp/0*7WFv_a5CABHqNba3.jpg)
+
+  <br>
+    This, however, may not always be the case as it is possible that there is noise in the quantum channel which is imitating as an eavesdropping attempt.
+    
+    
+
+
+  
       
  - Classical Phase: 
 
