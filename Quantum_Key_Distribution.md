@@ -19,7 +19,7 @@ Some important points:
   - The security of QKD is proved by Information Theory, & forward secrecy.Thus, theoretically, QKD is unhackable since any attempts to access the information leaves behind evidence, and the key 🗝️🔐 only decodes a small amount of a secure information and the private key may be changed every second. Also, the measurement of any one quantum observable intrinsically creates an uncertainity in the other properties of the system, i.e. one cannot measure non commuting observales simultaneously, this is established from the **Uncertainity Principle** (which states that if you measure one aspect of a quantum system, like its position or momentum, with high precision, there will unavoidably be a degree of uncertainty in some other related property, such as its momentum or energy).
   - Another safety feature of QKD is highlighted from the *No Cloning Theorem*, which states that it is impossible to create an exact copy of a quantum state through general quantum gates (/operations). Thus, this prevents an eavesdropper to make copies of the state being transferred.
   - *Non Orthogonality Principle* states that the measurement outcome of two states that are not orthogonal to each other can be distinguished. This is again very useful as it guarantees that one can not determine which of the two non orthogonal states were measured.
-
+  - [Useful PPT](https://www.slideserve.com/sun/the-adventures-of-alice-bob-eve-in-the-quantumland)
   - The successful transmission of secure information with a quantum channel has made QKD possible, and much more practical for the real world.
   - QKD involves 2 parties that wish to exchange keys through a classical and quantum channel. The Quantum channel is required to send quantum states, which doesn't need to be secure, and can be implemented over fiber optic, and even over free space. 
 **Quantum Channel* is one which transmits qubits, where the states O and 1 are attached to photons by **Polarization**(incase of a fibre optic channel).
@@ -40,9 +40,13 @@ Some important points:
 ## Key Exchange :
   - The key exchange involves the encoding of information in qubits (usually photons).
   - In general, 2 main protocols are used to encode information:
-      - Prepare and measure
-      - Quantum Entanglement: Here two qubits are entangled such that they become combined states which can not be individually separated, changes in any one of the state affects the another (note that this is not some sort of teleportation that takes place, but instead the two qubits are correlated upon their formation. This is helpful in key distribution, as it immediately detects any forgery.
-   
+      - Prepare and measure : In this, Alice encodes some classical information into quantum states, and sends it to Bob using an insecure channel of communication, later Bob performs some measurements on the received data to obtain the info (similar to **Quantum Teleportation**). Examples of protocols that use this: BB84, B92, & six-state protocols.
+      - Quantum Entanglement: Here two qubits are entangled such that they become combined states which can not be individually separated, changes in any one of the state affects the another (note that this is not some sort of teleportation that takes place, but instead the two qubits are correlated upon their formation). This is helpful in key distribution, as it immediately detects any forgery.
+        Alice prepares a *Maximally entangled Quantum state* (maximally entangled ensures complete correlation), of which one is sent to Bob and Alice keeps the other. Both of them perform measurement in two *[mutually unbiased system](https://en.wikipedia.org/wiki/Mutually_unbiased_bases)*, upon measurement, they both achieve a perfectly correlated states, which are RANDOM. An example of this includes the protocol: E91.
+Mutually Unbiased Bases can also be used for Quantum Error Connection, and detection of Entanglement. (for ex: measurement of ket (+) results in 50-50 probability of both ket 0 and ket 1).
+## Protocols:
+
+
 ### References:
   - [Helpful Link](https://medium.com/@qcgiitr/fundamentals-of-quantum-key-distribution-bb84-b92-e91-protocols-e1373b683ead)
   - [More on BB84](https://www.global.toshiba/ww/company/digitalsolution/articles/tsoul/38/004.html)
