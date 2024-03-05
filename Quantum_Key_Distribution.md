@@ -11,18 +11,20 @@ listed as follows:
 The process of measuring any key will in general disturb the system.
 
 Public Key Cryptography: :point_down:
-![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/141833ae-3053-46d8-bdaf-7c98a991f04e) 
+![Public-key cryptography - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Public_key_shared_secret.svg/250px-Public_key_shared_secret.svg.png) 
 
 Some important points:
   - It is a common misunderstanding that QKD is also used to encrypt & distribute data, which it doesn't. It is meant to produce and distribute a key which later on is used by an encryption algorithm such as AES256 to encrypt the data.
-  - Thus, QKD can replace PKC, which requires 2 keys: Public & Private. PKC also poses a problem since it relies on computational tasks that are based on the unproven assumption of being hard to solve, such as factoring a really large integer into a product of its primes.
-  - The security of QKD is proved by Information Theory, & forward secrecy.Thus, theoretically, QKD is unhackable since any attempts to access the information leaves behind evidence, and the key 🗝️🔐 only decodes a small amount of a secure information and the private key may be changed every second. Also, the measurement of any one quantum observable intrinsically creates an uncertainity in the other properties of the system, i.e. one cannot measure non commuting observales simultaneously, this is established from the **Uncertainity Principle** (which states that if you measure one aspect of a quantum system, like its position or momentum, with high precision, there will unavoidably be a degree of uncertainty in some other related property, such as its momentum or energy).
-  - Another safety feature of QKD is highlighted from the *No Cloning Theorem*, which states that it is impossible to create an exact copy of a quantum state through general quantum gates (/operations). Thus, this prevents an eavesdropper to make copies of the state being transferred.
+  - Thus, QKD can replace PKC, which requires 2 keys: **Public & Private**. PKC also poses a problem since it relies on computational tasks that are based on the unproven assumption of being hard to solve, such as factoring a really large integer into a product of its primes.
+  - The security of QKD is proved by Information Theory, & forward secrecy.Thus, theoretically, QKD is unhackable since any attempts to access the information leaves behind evidence, and the key 🗝️🔐 only decodes a small amount of a secure information and the private key may be changed every second.
+  
+	 Also, the measurement of any one quantum observable intrinsically creates an uncertainity in the other properties of the system, i.e. one cannot measure non commuting observales simultaneously, this is established from the **Uncertainity Principle** (which states that if you measure one aspect of a quantum system, like its position or momentum, with high precision, there will unavoidably be a degree of uncertainty in some other related property, such as its momentum or energy).
+  - Another safety feature of QKD is highlighted from the **No Cloning Theorem**, which states that it is impossible to create an exact copy of a quantum state through general quantum gates (/operations). Thus, this prevents an eavesdropper to make copies of the state being transferred.
   - *Non Orthogonality Principle* states that the measurement outcome of two states that are not orthogonal to each other can be distinguished. This is again very useful as it guarantees that one can not determine which of the two non orthogonal states were measured.
   - [Useful PPT](https://www.slideserve.com/sun/the-adventures-of-alice-bob-eve-in-the-quantumland)
   - The successful transmission of secure information with a quantum channel has made QKD possible, and much more practical for the real world.
   - QKD involves 2 parties that wish to exchange keys through a classical and quantum channel. The Quantum channel is required to send quantum states, which doesn't need to be secure, and can be implemented over fiber optic, and even over free space. 
-**Quantum Channel* is one which transmits qubits, where the states O and 1 are attached to photons by **Polarization**(incase of a fibre optic channel).
+**Quantum Channel* is one which transmits qubits, where the states O and 1 are attached to photons by **Polarization** (in the case of a fibre optic channel).
 
  - In Discrete Variable QKD, quantum info is encoded into DVs and binary data are measured by *single photon detectors* to extract the received quantum states. Here, the information is directly encoded into the polarization or phase state of the transmitted photon. (QM allows transfer of single photons).
 - In Continuous Var QKD, the wave nature of light is utilised, and quantum info is encoded into the amplitude and phase of a *coherent* laser and is measured using **Homodyne detectors**.
@@ -41,33 +43,33 @@ Some important points:
   - The key exchange involves the encoding of information in qubits (usually photons).
   - In general, 2 main protocols are used to encode information:
       - Prepare and measure : In this, Alice encodes some classical information into quantum states, and sends it to Bob using an insecure channel of communication, later Bob performs some measurements on the received data to obtain the info (similar to **Quantum Teleportation**). Examples of protocols that use this: BB84, B92, & six-state protocols.
-      - Quantum Entanglement: Here two qubits are entangled such that they become combined states which can not be individually separated, changes in any one of the state affects the another (note that this is not some sort of teleportation that takes place, but instead the two qubits are correlated upon their formation).<br>This is helpful in key distribution, as it immediately detects any forgery.
-        <br>Alice prepares a *Maximally entangled Quantum state* (maximally entangled ensures complete correlation), of which one is sent to Bob and Alice keeps the other. Both of them perform measurement in two *[mutually unbiased system](https://en.wikipedia.org/wiki/Mutually_unbiased_bases)*, upon measurement, they both achieve a perfectly correlated states, which are RANDOM. An example of this includes the protocol: E91. <br>
-Mutually Unbiased Bases can also be used for Quantum Error Connection, Quantum State Reconstruction and detection of Entanglement. (for ex: measurement of ket (+) results in 50-50 probability of both ket 0 and ket 1). Here, the main thing is: the measurement outcomes of a state prepared in a basis e<sub>i</sub> with respect to another basis state f<sub>i</sub> have the same probability. In slighlty easier words, this means the probability of measurement of outcomes in one basis are independent of the states prepared in other basis, with each outcome having an equal likelyhood. <br>
-## Protocols:
-<br>
-(Note: Quantum Teleportation is a protocol for transmitting quantum states across distances, involves entanglement, while the BB84 quantum key distribution protocol is designed for secure communication by generating shared secret keys and involves the use of No Cloning Theorem.)<br>
-<br>
-- BB84: Alice and Bob use an insecure quantum channel and an authenticated classical channel.
-  - Quantum Phase: First, Alice prepares a random quantum state encoding each bit (message bits) with the help of 4 basis states: horizontal, vertical, diagnol, & anti-diagnol (Photons as qubits). This is then sent to Bob, via a quantum channel, who then applies a quantum measurement to decode the bit values, effectively collapsing the state sent. Both Alice and Bob record their measurements & alice also notes the quantum system/state she sent and the relevant encoding. The transmission over the quantum channel introduces noise and effects of the eavesdropping attempts.
-  ![photon polarization](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/ce248f8e-9c44-4926-974c-ce6acafc6eaf)
-  ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/0aee0c8f-15f8-49e6-82f2-9314837ffc48)<br>
-  - Classical Phase:
-    Here, Bob will notify over a classical channel about the bases he chose, Alice will inform Bob about the bases he chose correctly, after that Bob removes the encoding to obtain something known as a *Sifted key*, which is the key that is identical to both if Bob chose the exact same basis for all bits as Alice, and partially identical, if his choices weren't exactly correct. Best explained through this diagram:
-    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/3083d64c-5c50-4e8c-b472-882e5c226be2)
-    <br>
-    To detect presence of any 3rd party, these two will now share a few bits of the sifted key, any disagreement will make it clear that there was forgery involved. Disagreement occurs when Bob uses the same polarization basis for a qubit but still obtains a different bit value. For Ex: ![image](https://miro.medium.com/v2/resize:fit:828/format:webp/0*7WFv_a5CABHqNba3.jpg)
+      - Quantum Entanglement: Here two qubits are entangled such that they become combined states which can not be individually separated, changes in any one of the state affects the another (note that this is not some sort of teleportation that takes place, but instead the two qubits are correlated upon their formation).<br/>This is helpful in key distribution, as it immediately detects any forgery.
+        <br/>Alice prepares a *Maximally entangled Quantum state* (maximally entangled ensures complete correlation), of which one is sent to Bob and Alice keeps the other. Both of them perform measurement in two *[mutually unbiased system](https://en.wikipedia.org/wiki/Mutually_unbiased_bases)*, upon measurement, they both achieve a perfectly correlated states, which are RANDOM. An example of this includes the protocol: E91. <br/>
+**Mutually Unbiased Bases can also be used for Quantum Error Connection, Quantum State Reconstruction and detection of Entanglement.**\
+ (for ex: measurement of |+⟩ results in 50-50 probability of both |0⟩ and |1⟩).
+ 
+		Here's the main thing: the measurement outcomes of a state prepared in a basis e<sub>i</sub> with respect to another basis state f<sub>i</sub> have the same probability. In slighlty easier words, this means the probability of measurement of outcomes in one basis are independent of the states prepared in other basis, with each outcome having an equal likelyhood.<br/>
 
-  <br>
+
+## Protocols:
+
+(Note: Quantum Teleportation is a protocol for transmitting quantum states across distances, involves entanglement, while the BB84 quantum key distribution protocol is designed for secure communication by generating shared secret keys and involves the use of No Cloning Theorem.)
+
+- **BB84**: Alice and Bob use an insecure quantum channel and an authenticated classical channel.
+  - Quantum Phase: First, Alice prepares a random quantum state encoding each bit (message bits) with the help of 4 basis states: horizontal, vertical, diagnol, & anti-diagnol (Photons as qubits). This is then sent to Bob, via a quantum channel, who then applies a quantum measurement to decode the bit values, effectively collapsing the state sent. Both Alice and Bob record their measurements & Alice also notes the quantum system/state she sent and the relevant encoding. The transmission over the quantum channel introduces noise and effects of the eavesdropping attempts.
+  - ![](https://miro.medium.com/v2/resize:fit:566/1*YE5JDgsNU72ubG_-06ec9g.png)<br/>
+  ![image](https://www.cse.wustl.edu/~jain/cse571-07/ftp/quantum/fig3.gif)
+  - Classical Phase:
+    Here, Bob will notify over a classical channel about the bases he chose, Alice will inform Bob about the bases he chose correctly, after that Bob removes the encoding to obtain something known as a **Sifted key**, which is the key that is identical to both if Bob chose the exact same basis for all bits as Alice, and partially identical, if his choices weren't exactly correct. Best explained through this diagram:     <br/>
+    ![example](https://miro.medium.com/v2/resize:fit:828/format:webp/0*7WFv_a5CABHqNba3.jpg)
+     <br/>
+
+    To detect presence of any 3rd party, these two will now share a few bits of the sifted key, any disagreement will make it clear that there was forgery involved. Disagreement occurs when Bob uses the same polarization basis for a qubit but still obtains a different bit value. For Ex:<br/> ![image](https://miro.medium.com/v2/resize:fit:828/format:webp/0*7WFv_a5CABHqNba3.jpg)
+
+  <br/>
     This, however, may not always be the case as it is possible that there is noise in the quantum channel which is imitating as an eavesdropping attempt.
     
-    
-
-
-  
-      
- - Classical Phase: 
-
+          
 
 ### References:
   - [Helpful Link](https://medium.com/@qcgiitr/fundamentals-of-quantum-key-distribution-bb84-b92-e91-protocols-e1373b683ead)
