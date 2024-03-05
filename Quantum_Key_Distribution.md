@@ -58,7 +58,7 @@ Some important points:
 - **BB84**: Alice and Bob use an insecure quantum channel and an authenticated classical channel.
   - Quantum Phase: First, Alice prepares a random quantum state encoding each bit (message bits) with the help of 4 basis states: horizontal, vertical, diagnol, & anti-diagnol (Photons as qubits). This is then sent to Bob, via a quantum channel, who then applies a quantum measurement to decode the bit values, effectively collapsing the state sent. Both Alice and Bob record their measurements & Alice also notes the quantum system/state she sent and the relevant encoding. The transmission over the quantum channel introduces noise and effects of the eavesdropping attempts.
   - ![](https://miro.medium.com/v2/resize:fit:566/1*YE5JDgsNU72ubG_-06ec9g.png)<br/>
-  ![image](https://www.cse.wustl.edu/~jain/cse571-07/ftp/quantum/fig3.gif)
+  ![[Sifted Key]](https://www.cse.wustl.edu/~jain/cse571-07/ftp/quantum/fig3.gif)
   - Classical Phase:
     Here, Bob will notify over a classical channel about the bases he chose, Alice will inform Bob about the bases he chose correctly, after that Bob removes the encoding to obtain something known as a **Sifted key**, which is the key that is identical to both if Bob chose the exact same basis for all bits as Alice, and partially identical, if his choices weren't exactly correct. Best explained through this diagram:     <br/>
     ![example](https://miro.medium.com/v2/resize:fit:828/format:webp/0*7WFv_a5CABHqNba3.jpg)
@@ -68,6 +68,23 @@ Some important points:
 
   <br/>
     This, however, may not always be the case as it is possible that there is noise in the quantum channel which is imitating as an eavesdropping attempt.
+  The probability that the eavesdropper goes undetected is (3/4)<sup>n</sup>, thus for sufficiently large values of n, this value becomes negligible.
+
+- **B92 Protocol** : This is a slight modification from the BB84 protocol, here instead of using 4 polarization bases, only 2 are used : 1 from horizontal & 1 from diagonal. Usually the Horizontal : H corresponds to 0 bit and 45° (diagonal) corr. to 1 bit.
+		 There are other variations of this protocol, for example: 
+		 **SSP99 Protocol**,
+		  SSP99 makes use of 6 orthogonal bases, which results in an even lower escape probability for Eve (eavesdropper).
+- **E91**: Ekert's 91 Protocol is based on **Quantum Entanglement**. <br/>
+![](https://miro.medium.com/v2/resize:fit:875/1*gZzZwOc_AF_Bj9muXtkw4A.png) <br/>
+Here, first Alice and Bob agree upon some EPR pair (entangled bell states, where the photons are maximally entangled and we achieve perfect correlation, i.e. one where the measurement outcomes of both (Bob & Alice) fully agree with each other *always*. <br/>
+Do note that the outcomes are still random and it is impossible for both Alice and Bob to predict them, and thus, a classical channel is used. Any attempt by Eve to eavesdrop destroys this correlation and the channel is abandoned.<br/>
+ Later, Alice makes some measurements using a randomly chosen basis : {0, π/8 , π/4}, and Bob does the same using : {−π/8 , 0, π/8}. 
+ Then, as similar to *BB84*, both disclose their measurement basis, and the measurement Result is divided into 2 groups: G1 and G2, G1: all other photons, G2: photons measured in the same basis.<br/>
+ To detect eavesdropping, a test statistic *S* is computed using the correlation coeff. b/w Alice's and Bob's basis, if S comes out to be 2*sqrt(2), it would imply that the photons are maximally entangled and the channel is safe, else discarded.<br/>
+If the channel is safe, one is free to use G2 to generate keys.
+
+ 
+ 
     
           
 
@@ -78,3 +95,5 @@ Some important points:
   - [Quantum Indeterminacy](https://en.wikipedia.org/wiki/Quantum_indeterminacy)
   - [QKD/Wikipedia](https://en.wikipedia.org/wiki/Quantum_key_distribution)
   - [book](https://www.intechopen.com/chapters/59491)
+  - [A Survey of the Prominent Quantum Key Distribution Protocols](https://www.cse.wustl.edu/~jain/cse571-07/ftp/quantum/#bb84)
+  - [Bell's Tests](https://en.wikipedia.org/wiki/Bell_test)
