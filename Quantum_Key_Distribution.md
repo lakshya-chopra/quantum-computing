@@ -16,7 +16,10 @@ Public Key Cryptography: :point_down:
 Some important points:
   - It is a common misunderstanding that QKD is also used to encrypt & distribute data, which it doesn't. It is meant to produce and distribute a key which later on is used by an encryption algorithm such as AES256 to encrypt the data.
   - Thus, QKD can replace PKC, which requires 2 keys: Public & Private. PKC also poses a problem since it relies on computational tasks that are based on the unproven assumption of being hard to solve, such as factoring a really large integer into a product of its primes.
-  - The security of QKD is proved by Information Theory, & forward secrecy.Thus, theoretically, QKD is unhackable since any attempts to access the information leaves behind evidence, and the key 🗝️🔐 only decodes a small amount of a secure information and the private key may be changed every second.
+  - The security of QKD is proved by Information Theory, & forward secrecy.Thus, theoretically, QKD is unhackable since any attempts to access the information leaves behind evidence, and the key 🗝️🔐 only decodes a small amount of a secure information and the private key may be changed every second. Also, the measurement of any one quantum observable intrinsically creates an uncertainity in the other properties of the system, i.e. one cannot measure non commuting observales simultaneously, this is established from the **Uncertainity Principle** (which states that if you measure one aspect of a quantum system, like its position or momentum, with high precision, there will unavoidably be a degree of uncertainty in some other related property, such as its momentum or energy).
+  - Another safety feature of QKD is highlighted from the *No Cloning Theorem*, which states that it is impossible to create an exact copy of a quantum state through general quantum gates (/operations). Thus, this prevents an eavesdropper to make copies of the state being transferred.
+  - *Non Orthogonality Principle* states that the measurement outcome of two states that are not orthogonal to each other can be distinguished. This is again very useful as it guarantees that one can not determine which of the two non orthogonal states were measured.
+
   - The successful transmission of secure information with a quantum channel has made QKD possible, and much more practical for the real world.
   - QKD involves 2 parties that wish to exchange keys through a classical and quantum channel. The Quantum channel is required to send quantum states, which doesn't need to be secure, and can be implemented over fiber optic, and even over free space. 
 **Quantum Channel* is one which transmits qubits, where the states O and 1 are attached to photons by **Polarization**(incase of a fibre optic channel).
@@ -46,3 +49,4 @@ Some important points:
   - [Quantum Channel](https://www.sciencedirect.com/topics/engineering/quantum-channel)
   - [Quantum Indeterminacy](https://en.wikipedia.org/wiki/Quantum_indeterminacy)
   - [QKD/Wikipedia](https://en.wikipedia.org/wiki/Quantum_key_distribution)
+  - [book](https://www.intechopen.com/chapters/59491)
