@@ -82,12 +82,17 @@ Here, first Alice and Bob agree upon some EPR pair (entangled bell states, where
 Do note that the outcomes are still random and it is impossible for both Alice and Bob to predict them, and thus, a classical channel is used. Any attempt by Eve to eavesdrop destroys this correlation and the channel is abandoned.<br/>
  Later, Alice makes some measurements using a randomly chosen basis : {0, π/8 , π/4}, and Bob does the same using : {−π/8 , 0, π/8}. 
  Then, as similar to *BB84*, both disclose their measurement basis, and the measurement Result is divided into 2 groups: G1 and G2, G1: all other photons, G2: photons measured in the same basis.<br/>
- To detect eavesdropping, a test statistic *S* is computed using the correlation coeff. b/w Alice's and Bob's basis, if S comes out to be 2*sqrt(2), it would imply that the photons are maximally entangled and the channel is safe, else discarded.<br/>
+ To detect eavesdropping, a test statistic *S* is computed using the correlation coeff. b/w Alice's and Bob's basis, if S comes out to be 2*sqrt(2), it would imply that the photons are maximally entangled and the channel is safe, else discarded. Basically, no matter what bases both of them choose, their end results would always correlate perfectly with each other, in case someone tries to eavesdrop, the correlation would get destroyed.<br/>
 If the channel is safe, one is free to use G2 to generate keys. <br/>
 ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/c945399e-5cc7-4c22-9b30-5af2d667cfbf)
 
 ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/5b8d4ba1-2665-4767-93f5-c9a425a27511)
 
+
+## Technical Limitations:
+- QKD generates keying material for encyrption algorithms, proving confidentiality, however, QKD doesn't give the cryptographic assurance that the transmission source is authentic or not, thus, one needs to still use asymmetric crypto or preplaced keys to provide authentication.
+- QKD requires some special hardware, like fiber connections, and cannot be implemented in software, like the Virtual ethernet (or OvSwitch).
+- QKD is affected by the risk of Denial of Service (DoS), due to increased sensitivity to eavesdropper.
 
  
  
