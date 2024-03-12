@@ -9,7 +9,7 @@ Before you learn this, please revise some common Qubit gates like:
  - Toffoli
  - Modified CNOT (which is activated when control Qubit is |0⟩)
  - U gate (which can be used to generate an arbitrary qubit), alongside Rx, Ry and Rz operators
- - An interesting modification of CNOT gate which works only when the control qubit is |0>.
+ - An interesting modification of CNOT gate which works only when the control qubit is |0⟩.
     ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/c2e31bfd-0d82-4e61-aa81-0d0206be2de3)
  - more:
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/606041af-15dc-4f5b-98d2-1f2a13fb0e4e)
@@ -40,7 +40,7 @@ Let's look at some common Quantum algorithms :
    ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/9117f696-3239-420e-b0c3-ef4520abfda6)
  
  - The computation behind the algorithm is big and can be read at the above mentioned source itself. The main crux of the computation is the phase inversion applied by the oracle which allows us to determine the nature of the function in just one attempt.
- - The cricuit has Hadamard Gates on both sides of the oracle which utilises the symmetry. The Hadamards after the oracle work to amplify the probability of the correct outputs and minimize those which are incorrect.
+ - The circuit has Hadamard Gates on both sides of the oracle which utilises the symmetry. The Hadamards after the oracle work to amplify the probability of the correct outputs and minimize those which are incorrect.
  - The final result for 0...0 bitstring is always 0...0 in the case of constant functions and something else for balanced functions.
  - For multi qubit functions, we use Toffoli gates to implement a balanced oracle.<br>
 - ### Bernstein-Vazirani: This is another algorithm based on the above mentioned Deutsch Josza algo. It is concerned with finding a hidden bit string "s" which is utilised by a function f(x) = s.x, where (.) -> indicates the inner product of the two bitstrings.
