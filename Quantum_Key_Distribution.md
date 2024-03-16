@@ -30,7 +30,8 @@ Some important points:
 - In Continuous Var QKD, the wave nature of light is utilised, and quantum info is encoded into the amplitude and phase of a *coherent* laser and is measured using **Homodyne detectors**.
 - ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/d4bca1ac-3e49-459b-8bc1-bf4b730b3794)
 - ![Source: Science Direct](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/08a756bd-a1c9-40a7-8da9-8f6b7f38b03b) 
-
+<br/>
+- OKD can be combined with PQC to give maximum security to any critical network.
 
 ## Management of Secure keys:
 
@@ -88,13 +89,18 @@ If the channel is safe, one is free to use G2 to generate keys. <br/>
 
 ![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/5b8d4ba1-2665-4767-93f5-c9a425a27511)
 
+![image](https://github.com/lakshya-chopra/quantum-computing/assets/77010972/8da7cb76-dbcf-47ee-a02b-4e9c78ec2339) <br/>
+
+
 
 ## Technical Limitations:
 - QKD generates keying material for encyrption algorithms, proving confidentiality, however, QKD doesn't give the cryptographic assurance that the transmission source is authentic or not, thus, one needs to still use asymmetric crypto or preplaced keys to provide authentication.
 - QKD requires some special hardware, like fiber connections, and cannot be implemented in software, like the Virtual ethernet (or OvSwitch).
 - QKD is affected by the risk of Denial of Service (DoS), due to increased sensitivity to eavesdropper.
 
- 
+## Some real-world implementations of QKD:
+- [High speed genomic data transfer](https://www.global.toshiba/ww/products-solutions/security-ict/qkd/cases/case1.html) : This was done to mitigate the consequences of `Harvest now, Decrypt Later` attacks.
+- [Hefei Metro Area Quant Communication](http://www.quantum-info.com/English/case/2017/0619/254.html)
  
     
           
@@ -108,3 +114,4 @@ If the channel is safe, one is free to use G2 to generate keys. <br/>
   - [book](https://www.intechopen.com/chapters/59491)
   - [A Survey of the Prominent Quantum Key Distribution Protocols](https://www.cse.wustl.edu/~jain/cse571-07/ftp/quantum/#bb84)
   - [Bell's Tests](https://en.wikipedia.org/wiki/Bell_test)
+  - [qkd from CDOT, give the PDF a good read](https://www.cdot.in/cdotweb/web/product_page.php?lang=en&catId=1&pId=48)
