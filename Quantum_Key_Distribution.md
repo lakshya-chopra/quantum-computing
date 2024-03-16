@@ -115,3 +115,4 @@ If the channel is safe, one is free to use G2 to generate keys. <br/>
   - [A Survey of the Prominent Quantum Key Distribution Protocols](https://www.cse.wustl.edu/~jain/cse571-07/ftp/quantum/#bb84)
   - [Bell's Tests](https://en.wikipedia.org/wiki/Bell_test)
   - [qkd from CDOT, give the PDF a good read](https://www.cdot.in/cdotweb/web/product_page.php?lang=en&catId=1&pId=48)
+  - [QKD : A Networking Perspective](https://dl.acm.org/doi/fullHtml/10.1145/3402192)
